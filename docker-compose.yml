@@ -78,8 +78,8 @@ services:
       RABBITMQ_SSL_VERIFY: verify_none
       RABBITMQ_SSL_FAIL_IF_NO_PEER_CERT: "false"
     volumes:
-      - "./docker/certs/rootCA.pem:/rootCA.pem:ro"
-      - "./docker/certs/rootCA.key:/rootCA.key:ro"
+      - "./docker/config/certs/rootCA.pem:/rootCA.pem:ro"
+      - "./docker/config/certs/rootCA.key:/rootCA.key:ro"
     ports:
       - 15671:15671
       - 15672:15672
@@ -98,8 +98,8 @@ services:
       RABBITMQ_MANAGEMENT_SSL_VERIFY: verify_none
       RABBITMQ_MANAGEMENT_SSL_FAIL_IF_NO_PEER_CERT: "false"
     volumes:
-      - "./docker/certs/rootCA.pem:/rootCA.pem:ro"
-      - "./docker/certs/rootCA.key:/rootCA.key:ro"
+      - "./docker/config/certs/rootCA.pem:/rootCA.pem:ro"
+      - "./docker/config/certs/rootCA.key:/rootCA.key:ro"
     ports:
       - 15671:15671
       - 15672:15672
