@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Providers\Services\Contracts\TestContract;
+use App\Providers\Services\TestService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

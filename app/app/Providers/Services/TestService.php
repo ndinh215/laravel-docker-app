@@ -1,16 +1,17 @@
 <?php
 
-namespace App\Providers;
+namespace App\Providers\Services;
 
 use App\Events\TestEvent;
+use App\Providers\Services\Contracts\TestContract;
 
-class TestService implements \App\Providers\TestContract
+class TestService implements TestContract
 {
     /**
      * @inheritDoc
      */
     public function validate(TestEvent $event)
     {
-        echo("{$event->getEventType()}: {$event->getEventData()} \n");
+        echo("{$event->getEventType()} v2: {$event->getEventData()} \n");
     }
 }

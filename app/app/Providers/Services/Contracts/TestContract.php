@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace App\Providers\Services\Contracts;
 
 use App\Events\TestEvent;
 

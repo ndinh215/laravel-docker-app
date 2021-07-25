@@ -3,7 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\TestEvent;
-use App\Providers\TestContract;
+use App\Providers\Services\Contracts\TestContract;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class TestListener implements ShouldQueue
