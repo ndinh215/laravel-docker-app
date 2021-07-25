@@ -13,5 +13,6 @@ class TestService implements TestContract
     public function validate(TestEvent $event)
     {
         echo("{$event->getEventType()} v2: {$event->getEventData()} \n");
+        return true;
     }
 }
