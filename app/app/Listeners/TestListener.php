@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Events\TestEvent;
 use App\Providers\Services\Contracts\TestContract;
+use App\Providers\Services\TestServiceFacade;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 class TestListener implements ShouldQueue
@@ -35,5 +36,6 @@ class TestListener implements ShouldQueue
     public function handle(TestEvent $event)
     {
         $this->testService->validate($event);
+        TestServiceFacade::validate($event);
     }
 }
