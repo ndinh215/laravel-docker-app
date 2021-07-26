@@ -4,7 +4,8 @@ namespace App\Providers\Services\Contracts;
 
 use App\Events\TestEvent;
 
-interface TestContract {
+interface TestContract
+{
 
     /**
      * @param TestEvent $event

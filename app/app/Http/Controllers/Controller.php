@@ -12,7 +12,8 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function test() {
+    public function test()
+    {
         TestEvent::dispatch(new TestEvent('test', 'test data'));
     }
 }

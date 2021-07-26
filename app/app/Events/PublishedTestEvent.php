@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Events;
 
 use Nuwber\Events\Event\Publishable;
@@ -22,11 +23,6 @@ class PublishedTestEvent implements ShouldPublish
         $this->array = $array;
     }
 
-    public function publishEventName(): string
-    {
-        return 'test_event';
-    }
-
     public function toPublish(): array
     {
         return [
@@ -37,5 +33,10 @@ class PublishedTestEvent implements ShouldPublish
     public function publishEventKey(): string
     {
         return $this->publishEventName();
+    }
+
+    public function publishEventName(): string
+    {
+        return 'test_event';
     }
 }

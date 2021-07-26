@@ -30,7 +30,7 @@ class TestListener implements ShouldQueue
     /**
      * Handle the event.
      *
-     * @param  TestEvent  $event
+     * @param TestEvent $event
      * @return void
      */
     public function handle(TestEvent $event)

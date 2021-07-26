@@ -13,14 +13,16 @@ class TestApiController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function test() {
+    public function test()
+    {
         TestEvent::dispatch('test', 'test data');
     }
 
     /**
      * @throws \Throwable
      */
-    public function testQueue() {
+    public function testQueue()
+    {
         $data = ['name' => 'John Doe', 'email' => 'email@example.com'];
         PublishedTestEvent::publish($data);
     }
