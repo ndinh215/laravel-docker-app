@@ -2,16 +2,19 @@
 
 namespace App\Providers;
 
+use App\Listeners\TestRabbitMQListener;
+
 class RabbitEventsServiceProvider extends \Nuwber\Events\RabbitEventsServiceProvider
 {
-
     /**
      * The event listener mappings for the application.
      *
      * @var array
      */
     protected $listen = [
-
+        'test_event' => [
+            TestRabbitMQListener::class
+        ]
     ];
 
     /**

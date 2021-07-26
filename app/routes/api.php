@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/test', [TestApiController::class, 'test']);
+
+Route::get('/test/queue', [TestApiController::class, 'testQueue']);

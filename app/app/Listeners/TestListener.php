@@ -20,7 +20,7 @@ class TestListener implements ShouldQueue
     /**
      * Create the event listener.
      *
-     * @return void
+     * @param TestContract $testService
      */
     public function __construct(TestContract $testService)
     {

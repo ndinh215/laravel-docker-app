@@ -10,7 +10,7 @@ class ServiceTest extends TestCase
     public function testValidate()
     {
         $event = new TestEvent('test', 'test data');
-        $service = new TestService();
+        $service = new TestRabbitMQService();
 
         $this->assertTrue($service->validate($event));
     }

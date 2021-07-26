@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\PublishedTestEvent;
 use App\Events\TestEvent;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -14,5 +15,13 @@ class TestApiController extends BaseController
 
     public function test() {
         TestEvent::dispatch('test', 'test data');
+    }
+
+    /**
+     * @throws \Throwable
+     */
+    public function testQueue() {
+        $data = ['name' => 'John Doe', 'email' => 'email@example.com'];
+        PublishedTestEvent::publish($data);
     }
 }

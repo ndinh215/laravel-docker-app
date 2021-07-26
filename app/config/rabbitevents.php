@@ -24,9 +24,9 @@ return [
             'port' => env('RABBITEVENTS_PORT', 5672),
             'user' => env('RABBITEVENTS_USER', 'guest'),
             'pass' => env('RABBITEVENTS_PASSWORD', 'guest'),
-            'vhost' => env('RABBITEVENTS_VHOST', 'events'),
+            'vhost' => env('RABBITEVENTS_VHOST', '/'),
             'logging' => [
-                'enabled' => env('RABBITEVENTS_LOG_ENABLED', false),
+                'enabled' => env('RABBITEVENTS_LOG_ENABLED', true),
                 'level' => env('RABBITEVENTS_LOG_LEVEL', 'info'),
             ],
             'delay_strategy' => env('RABBITEVENTS_DELAY_STRATEGY', RabbitMqDlxDelayStrategy::class),
